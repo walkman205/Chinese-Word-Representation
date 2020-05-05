@@ -10,6 +10,8 @@ import argparse
 import logging
 from tqdm import tqdm
 
+import wubi
+
 def convert_radical(s):
     radical = None
     return radical
@@ -19,7 +21,7 @@ def convert_stroke(s):
     return stroke
 
 def convert_wubi(s):
-    wubi = None
+    wubi = wubi.get('s','cw')
     return wubi
 
 def main():
