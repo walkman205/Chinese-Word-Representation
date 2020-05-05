@@ -10,7 +10,7 @@ import argparse
 import logging
 from tqdm import tqdm
 
-import wubi
+from pywubi import wubi
 
 def convert_radical(s):
     radical = None
@@ -21,8 +21,8 @@ def convert_stroke(s):
     return stroke
 
 def convert_wubi(s):
-    wubi = wubi.get('s','cw')
-    return wubi
+    embedding = wubi(s,single=False)
+    return embedding
 
 def main():
     logging.basicConfig(level=logging.INFO,
